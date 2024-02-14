@@ -83,12 +83,13 @@ search.addEventListener("keydown", function (event) {
       
     spner.classList.add("spinner")
     
-    counteryInformation.textContent = "" 
+    
 
 
     if (event.key === "Enter") {
+        counteryInformation.textContent = "" 
         
-        let spner = document.getElementById("")
+        
         let searchvalue = search.value;
         let finalsearchValue = searchvalue.charAt(0).toUpperCase() + searchvalue.slice(1);
        
@@ -105,7 +106,8 @@ search.addEventListener("keydown", function (event) {
                     
                     
                     if((i.name).includes(finalsearchValue)){
-                         
+                        
+                        
                         spner.classList.remove("spinner")
         let dataInfoContainer = document.createElement("div");
         dataInfoContainer.classList.add("m-3", "bg-dark", "d-flex", "justify-content-between", "f-row", "p-3");
@@ -152,7 +154,7 @@ search.addEventListener("keydown", function (event) {
             });
            
     }
-        if(search.value !== ""){
+        if(search.value === ""){
             spner.classList.remove("spinner")
         let url = "https://apis.ccbp.in/countries-data";
         fetch(url)
